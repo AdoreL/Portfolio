@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <div id="bg-1">
+
+      {% if success==true %}
+        <h3>Your message has been sent<br>
+            I will try to get back to you within 24 hours</h3>
+      {% else %}
+
+        {% for message in form.name.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.subject.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.message.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        <form action="{{ url_for('Contact') }}" method=post>
+            {{ form.hidden_tag() }}
+
+            {{ form.name.label }}
+            {{ form.name (placeholder='First and Last')}}
+
+            {{ form.email.label }}
+            {{ form.email (placeholder='example@email.com')}}
+
+            {{ form.subject.label }}
+            {{ form.subject }}
+
+            {{ form.message.label }}
+            {{ form.message }}
+
+            {{ form.submit }}
+        </form>
+    {% endif %}
+    </div>
+
+
+    <div class="container-fluid bg-2 text-center">
+        <h3>Currently Situated</h3>
+        <div id="googleMap"></div>
+        <script>
+            function myMap() {
+                var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+                var mapProp = {
+                    center: myCenter,
+                    zoom: 12,
+                    scrollwheel: false,
+                    draggable: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                var marker = new google.maps.Marker({
+                    position: myCenter
+                });
+                marker.setMap(map);
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm1gbUtGuB6lmmfkyzMyrl9O_qiMSIB_k&callback=myMap"></script>
+    </div>
+</body>
+
+</html>

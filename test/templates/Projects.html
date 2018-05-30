@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+
+
+
+    <div class="container-fluid bg-1">
+        <h1>2017</h1>
+        <!-- Trigger the Modal -->
+        <div id="spacing">
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="225" id="img2" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Photograph1.jpg') }}" alt="Stairs to the Forest, Photograph" />
+            <img width="150" height="250" id="img3" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Photoshop.jpg') }}" alt="Restored Portrait, Photoshop" />
+            <img width="325" height="250" id="img4" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/lighting.png') }}" alt="Shopping Granny Map, Unity" />
+            <span class="stretch"></span>
+        </div>
+
+        <div id="spacing">
+            <img width="325" height="225" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Photograph1.jpg') }}" alt="Stairs to the Forest, Photograph" />
+            <img width="150" height="250" id="img2" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Photoshop.jpg') }}" alt="Restored Portrait, Photoshop" />
+            <img width="325" height="250" id="img3" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/lighting.png') }}" alt="Shopping Granny Map, Unity" />
+            <img width="325" height="250" id="img4" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <span class="stretch"></span>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" src="" />
+                        <div id="caption"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2">
+        <h1>2016</h1>
+        <!-- Trigger the Modal -->
+        <div id="spacing">
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <span class="stretch"></span>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" src="" />
+                        <div id="caption"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-3">
+        <h1>2015</h1>
+        <!-- Trigger the Modal -->
+        <div id="spacing">
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <img width="325" height="250" id="img1" data-toggle="modal" data-target="#myModal" src="{{ url_for('static',filename='images/Illustrator.png') }}" alt="Unlucky Petulia, Illustrator" />
+            <span class="stretch"></span>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-responsive" src="{{ url_for('static',filename='') }}" />
+                        <div id="caption"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+    <script>
+        $(document).ready(function() {
+            $('img').on('click', function() {
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = this.alt;
+                var image = $(this).attr('src');
+                $('#myModal').on('show.bs.modal', function() {
+                    $(".img-responsive").attr("src", image);
+                });
+            });
+        });
+
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200); // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200); // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() { // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0 // Scroll to top of body
+            }, 500);
+        });
+    </script>

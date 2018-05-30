@@ -1,0 +1,224 @@
+.navbar {
+    background-color: #222222;
+    font-size: 150%;
+    opacity: 0.9;
+    font-family: 'Play', sans-serif;
+}
+
+.navbar li a {
+    color: #ec008c;
+}
+
+.navbar-nav li a:hover {
+    color: black;
+}
+
+.icon-bar {
+    background: springgreen !important;
+}
+
+.navbar-toggle {
+    background: #483c6c !important;
+}
+
+
+/* Style the Image Used to Trigger the Modal */
+
+#img1,
+#img2,
+#img3,
+#img4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#img1:hover,
+#img2:hover,
+#img3:hover,
+#img4:hover {
+    padding: 1%;
+    background-color: lightseagreen;
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2040 !important;
+    /* Sit on top */
+    padding-top: 25px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    visibility: hidden;
+}
+
+.modal-footer {
+    visibility: visible !important;
+}
+
+.btn {
+    font-family: 'Play', sans-serif;
+    color: black;
+}
+
+.img-responsive {
+    visibility: visible !important;
+}
+
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    visibility: visible !important;
+    margin: auto;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: lightseagreen;
+    font-family: 'Play', sans-serif;
+    font-size: 150%;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.bg-1 {
+    padding-bottom: 10%;
+}
+
+.bg-1 h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 450%;
+    text-align: center;
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+.bg-2 {
+    background-color: #222222;
+    padding-bottom: 10%;
+}
+
+.bg-2 h1 {
+    font-family: 'Pacifico', cursive !important;
+    color: white;
+    font-size: 450%;
+    text-align: center;
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+.bg-3 {
+    padding-bottom: 10%;
+}
+
+.bg-3 h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 450%;
+    text-align: center;
+    padding: 3%;
+    padding-bottom: 5%;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+#spacing {
+    text-align: justify;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+
+}

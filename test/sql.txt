@@ -1,0 +1,12 @@
+-- in root folder of project, issue the following to create database
+-- sqlite3 comments.db < schema.sql
+
+DROP TABLE IF EXISTS comments_table;
+
+
+CREATE TABLE contact_table (
+    name text NOT NULL,
+    email text NOT NULL,
+    subject text NOT NULL,
+    comment text NOT NULL
+    );

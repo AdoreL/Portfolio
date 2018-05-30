@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #222222;
+    font-size: 150%;
+    opacity: 0.9;
+    font-family: 'Play', sans-serif;
+}
+
+.navbar li a {
+    color: #ec008c;
+}
+
+.navbar-nav li a:hover {
+    color: black;
+}
+
+.icon-bar {
+    background: springgreen !important;
+}
+
+.navbar-toggle {
+    background: #483c6c !important;
+}
+
+body {
+    background-image: url(../images/Background.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#header {
+    margin-top: 5%;
+}
+
+header {
+    color: black;
+    font-size: 1000%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+p {
+    color: black;
+    padding-top: 2%;
+    font-size: 500%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}

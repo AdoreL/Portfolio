@@ -1,0 +1,41 @@
+{% extends 'template_parent.html'%}
+
+{% block title%} {{ title }} {% endblock%}
+
+{% block head %}
+    {% include 'head.html'%}
+    {% if title == 'Home' %}
+        <link href="{{ url_for('static',filename='css/HomeStyle.css') }}" rel="stylesheet">
+    {% endif %}
+    {% if title == 'About' %}
+        <link href="{{ url_for('static',filename='css/AboutStyle.css') }}" rel="stylesheet">
+    {% endif %}
+    {% if title == 'Portfolio' %}
+        <link href="{{ url_for('static',filename='css/PortfolioStyle.css') }}" rel="stylesheet">
+    {% endif %}
+    {% if title == 'Projects' %}
+        <link href="{{ url_for('static',filename='css/ProjectsStyle.css') }}" rel="stylesheet">
+    {% endif %}
+    {% if title == 'Contact' %}
+        <link href="{{ url_for('static',filename='css/ContactStyle.css') }}" rel="stylesheet">
+    {% endif %}
+{% endblock %}
+
+{% block content%}
+    {% include 'navbar.html'%}
+    {% if title == 'Home' %}
+        {% include 'Home.html' %}
+    {% endif %}
+    {% if title == 'About' %}
+        {% include 'About.html' %}
+    {% endif %}
+    {% if title == 'Portfolio' %}
+        {% include 'Portfolio.html' %}
+    {% endif %}
+    {% if title == 'Projects' %}
+        {% include 'Projects.html' %}
+    {% endif %}
+    {% if title == 'Contact' %}
+        {% include 'Contact.html' %}
+    {% endif %}
+{% endblock %}

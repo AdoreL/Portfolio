@@ -1,0 +1,66 @@
+.navbar {
+    background-color: #222222;
+    font-size: 150%;
+    opacity: 0.9;
+    font-family: 'Play', sans-serif;
+}
+
+.navbar li a {
+    color: #ec008c;
+}
+
+.navbar-nav li a:hover {
+    color: black;
+}
+
+.icon-bar {
+    background: springgreen !important;
+}
+
+.navbar-toggle {
+    background: #483c6c !important;
+}
+
+body {
+    background-color: #26eed1 !important;
+}
+
+.bg-1 {
+    font-family: 'Pacifico', cursive;
+    background-color: #26eed1;
+    color: #483c6c;
+    padding-top: 5%;
+}
+
+.bg-1 h3 {
+    margin-bottom: 4%;
+    font-size: 650%;
+}
+
+.bg-1 h4 {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-size: 650%;
+}
+
+.bg-2 {
+    font-family: 'Play', sans-serif;
+    background-color: #483c6c !important;
+    color: #26eed1;
+    padding-bottom: 4%;
+}
+
+.bg-2 h1 {
+    font-size: 350%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.bg-2 #About {
+    font-size: 120%;
+}
+
+.bg-2 #codelan {
+    margin-top: 2%;
+    color: springgreen;
+}
